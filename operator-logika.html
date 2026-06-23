@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Operator Logika</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>Operator Logika dalam JavaScript</h1>");
+        // Mendeklarasikan variabel
+        var a = true;
+        var b = false;
+        document.writeln("Nilai awal a: " + a);
+        document.writeln("Nilai awal b: " + b);
+        document.writeln("<br>"); // Menambahkan baris baru
+
+        // Operator Logika
+        document.writeln("a && b: " + (a && b));
+        document.writeln("a || b: " + (a || b));
+        document.writeln("!a: " + (!a));
+        document.writeln("<br>===============================");
+        const nilaiUjian = 70;
+        const nilaiAbsensi = 75;
+        const lulusUjian = nilaiUjian >= 60;
+        const lulusAbsensi = nilaiAbsensi >= 75;
+
+        const lulus = lulusUjian && lulusAbsensi;
+        document.writeln("<br>");
+        document.writeln("Lulus Ujian: " + lulusUjian);
+        document.writeln("<br>");
+        document.writeln("Lulus Absensi: " + lulusAbsensi);
+        document.writeln("<br>");
+        document.writeln("Lulus: " + lulus);
+
+    </script>
+</body>
+</html>
