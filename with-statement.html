@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>With Statement</title>
+    </head>
+    <body>
+        <script>
+            // Contoh tanpa menggunakan with statement
+            const personWithoutWith = {
+                firstName: "Ega",
+                lastName: "Teja",
+                age: 30
+            };
+            document.writeln("<h3>Contoh tanpa menggunakan with statement:</h3>");
+            document.writeln(`<p>Nama Lengkap: ${personWithoutWith.firstName} ${personWithoutWith.lastName}</p>`);
+            document.writeln(`<p>Usia: ${personWithoutWith.age}</p>`);
+
+            // Contoh penggunaan with statement
+            document.writeln("<h2>With Statement</h2>");
+
+            const personUsingWith = {
+                firstName: "Ega",
+                lastName: "Teja",
+                age: 30
+            };
+
+            /** 
+             * Menggunakan with statement untuk mengakses properti objek tanpa harus menuliskan nama objeknya secara berulang
+             * "with" sudah tidak direkomendasikan penggunaannya karena dapat membuat kode menjadi ambigu dan sulit dibaca.
+             */
+            with (personUsingWith) {
+                document.writeln(`<p>Nama Lengkap: ${firstName} ${lastName}</p>`);
+                document.writeln(`<p>Usia: ${age}</p>`);
+            }
+            
+
+            // Ganti with statement dengan destructuring assignment
+            const { firstName, lastName, age } = personUsingWith;
+            document.writeln("<h3>Contoh menggunakan destructuring assignment:</h3>");
+            document.writeln(`<p>Nama Lengkap: ${firstName} ${lastName}</p>`);
+            document.writeln(`<p>Usia: ${age}</p>`);
+        </script>
+    </body>
+</html>
