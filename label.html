@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Label Statement</title>
+    </head>
+    <body>
+        <script>
+            // Contoh penggunaan label statement
+            document.writeln("<h2>Label Statement</h2>");
+
+            /**
+             * Label statement digunakan untuk memberikan label pada loop atau blok kode tertentu.
+             * Dalam contoh ini, kita menggunakan label "outerLoop" untuk menandai loop luar, sehingga kita dapat menggunakan "continue outerLoop" untuk melanjutkan ke iterasi berikutnya dari loop luar.
+             */
+            outerLoop: for (let i = 1; i <= 3; i++) {
+                document.writeln(`<p>Iterasi Luar ke-${i}</p>`);
+                for (let j = 1; j <= 3; j++) {
+                    if (j === 2) {
+                        continue outerLoop; // Melanjutkan ke iterasi berikutnya dari outerLoop
+                    }
+                    document.writeln(`<p>Iterasi Dalam ke-${j}</p>`);
+                }
+            }
+        </script>
+    </body>
+</html>
