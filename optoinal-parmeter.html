@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>JavaScript Optional Parameters</title>
+    </head>
+    <body>
+        <script>
+            // Contoh penggunaan optional parameters
+            document.writeln("<h2>Optional Parameters</h2>");
+
+            /** 
+             * Fungsi greet dengan parameter opsional greeting
+             * @param {string} name - Nama yang akan disapa
+             * @param {string} [greeting="Hello"] - Salam opsional (default: "Hello")
+             * @returns {string} - Pesan sapaan
+             * Ketika memanggil fungsi greet, jika parameter di kirimkan lebih banyak dari yang diharapkan, maka parameter tambahan akan diabaikan 
+             * dan tidak akan mempengaruhi hasil dari fungsi tersebut (berbahaya).
+             */
+            function greet(name, greeting = "Hello") {
+                return `${greeting}, ${name}!`;
+            }
+
+            const message1 = greet("World");
+            const message2 = greet("World", "Hi");
+            const message3 = greet("World", "Hi", "Extra Parameter"); // Parameter tambahan akan diabaikan
+
+            document.writeln(`<p>${message1}</p>`);
+            document.writeln(`<p>${message2}</p>`);
+            document.writeln(`<p>${message3}</p>`);
+        </script>
+    </body>
+</html>
