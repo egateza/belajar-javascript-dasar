@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JavaScript Nullish Coalescing Operator</title>
+    </head>
+    <body>
+        <script>
+            let firstName = "Ega";
+            let lastName = null;
+            let age = 25;
+            let isStudent = undefined;
+
+            document.writeln("<h2>Contoh Nullish Coalescing Operator</h2>");
+            document.writeln(`<p>firstName: ${firstName ?? "Tidak ada"}</p>`);
+            document.writeln(`<p>lastName: ${lastName ?? "Tidak ada"}</p>`);
+            document.writeln(`<p>age: ${age ?? "Tidak ada"}</p>`);
+            document.writeln(`<p>isStudent: ${isStudent ?? "Tidak ada"}</p>`);
+
+            document.writeln("<h2>Contoh menggunakan if-else</h2>");
+            if (firstName !== null && firstName !== undefined) {
+                document.writeln(`<p>firstName: ${firstName}</p>`);
+            } else {
+                document.writeln("<p>firstName: Tidak ada</p>");
+            }
+            if (lastName !== null && lastName !== undefined) {
+                document.writeln(`<p>lastName: ${lastName}</p>`);
+            } else {
+                document.writeln("<p>lastName: Tidak ada</p>");
+            }
+            if (age !== null && age !== undefined) {
+                document.writeln(`<p>age: ${age}</p>`);
+            } else {
+                document.writeln("<p>age: Tidak ada</p>");
+            }
+            if (isStudent !== null && isStudent !== undefined) {
+                document.writeln(`<p>isStudent: ${isStudent}</p>`);
+            } else {
+                document.writeln("<p>isStudent: Tidak ada</p>");
+            }
+        </script>
+    </body>
+</html>
