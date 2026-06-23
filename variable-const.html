@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript const variable</title>
+</head>
+<body>
+    <script>
+        // Mendeklarasikan variabel const
+        const nama = "John";
+        const usia = 25;
+        const isMahasiswa = true;
+
+        // Menampilkan nilai variabel
+        document.writeln("Nama: " + nama);
+        document.writeln("Usia: " + usia);
+        document.writeln("Apakah mahasiswa: " + isMahasiswa);
+
+        nama = "Ega Teja Pratama"; // Mengubah nilai variabel nama
+        // code di atas akan menghasilkan error karena variabel const tidak dapat diubah nilainya setelah dideklarasikan.
+        document.writeln("<br>");
+        document.writeln("Nama: " + nama); // Menampilkan nilai variabel nama setelah diubah
+    </script>
+</body>
+</html>
