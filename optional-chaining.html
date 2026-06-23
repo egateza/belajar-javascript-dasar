@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>JavaScript Optional Chaining Operator</title>
+    </head>
+    <body>
+        <script>
+            let user = {
+                name: "Ega",
+                address: {
+                    street: "Jalan Merdeka",
+                    city: "Jakarta"
+                }
+            };
+
+            // const person = {};
+            const person = {
+                address: {
+                    country: "Indonesia",
+                    street: "Jalan Sudirman",
+                    city: "Bandung"
+                }
+            };
+
+            let country = person?.address?.country ?? "Tidak ada";
+            console.log(country); // Output: Indonesia/Tidak ada
+
+            document.writeln("<h2>Contoh Optional Chaining Operator</h2>");
+            document.writeln(`<p>Name: ${user.name}</p>`);
+            document.writeln(`<p>Street: ${user.address?.street ?? "Tidak ada"}</p>`);
+            document.writeln(`<p>City: ${user.address?.city ?? "Tidak ada"}</p>`);
+
+            // Mengakses properti yang tidak ada
+            document.writeln(`<p>Country: ${user.address?.country ?? "Tidak ada"}</p>`);
+
+            document.writeln("<h2>Contoh menggunakan if-else</h2>");
+            if (user.address && user.address.street) {
+                document.writeln(`<p>Street: ${user.address.street}</p>`);
+            } else {
+                document.writeln("<p>Street: Tidak ada</p>");
+            }
+            if (user.address && user.address.city) {
+                document.writeln(`<p>City: ${user.address.city}</p>`);
+            } else {
+                document.writeln("<p>City: Tidak ada</p>");
+            }
+            if (user.address && user.address.country) {
+                document.writeln(`<p>Country: ${user.address.country}</p>`);
+            } else {
+                document.writeln("<p>Country: Tidak ada</p>");
+            }
+        </script>
+    </body>
+</html>
