@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JavaScript Switch Statement</title>
+    </head>
+    <body>
+        <script>
+            let day = "Thursday"; // Anda dapat mengubah nilai ini untuk menguji kasus yang berbeda
+            document.writeln("<h2>Contoh Switch Statement</h2>");
+            switch (day) {
+                case "Monday":
+                    document.writeln("<p>Hari ini adalah Senin.</p>");
+                    break;
+                case "Tuesday":
+                    document.writeln("<p>Hari ini adalah Selasa.</p>");
+                    break;
+                case "Wednesday":
+                    document.writeln("<p>Hari ini adalah Rabu.</p>");
+                    break;
+                case "Thursday":
+                case "Friday":
+                    document.writeln("<p>Hari ini adalah Kamis atau Jumat.</p>");
+                    break;
+                default:
+                    document.writeln("<p>Ini bukan hari kerja.</p>");
+            }
+
+            document.writeln("<h2>Contoh Statement dengan menggunakan if</h2>");
+            if (day === "Monday") {
+                document.writeln("<p>Hari ini adalah Senin.</p>");
+            } else if (day === "Tuesday") {
+                document.writeln("<p>Hari ini adalah Selasa.</p>");
+            } else if (day === "Wednesday") {
+                document.writeln("<p>Hari ini adalah Rabu.</p>");
+            } else if (day === "Thursday" || day === "Friday") {
+                document.writeln("<p>Hari ini adalah Kamis atau Jumat.</p>");
+            } else {
+                document.writeln("<p>Ini bukan hari kerja.</p>");
+            }
+        </script>
+    </body>
+</html>
