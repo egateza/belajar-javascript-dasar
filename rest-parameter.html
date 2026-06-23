@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JavaScript Rest Parameters</title>
+    </head>
+    <body>
+        <script>
+            // Contoh penggunaan rest parameters
+            document.writeln("<h2>Rest Parameters</h2>");
+            /** 
+             * Fungsi sum dengan rest parameters
+             * @param {string} name - Nama yang akan disapa
+             * @param {...number} numbers - Angka-angka yang akan dijumlahkan
+             * @returns {number} - Hasil penjumlahan dari angka-angka yang diberikan
+             * Rest parameters memungkinkan kita untuk menangkap sejumlah argumen yang tidak terbatas ke dalam sebuah array.
+             */
+            function sum(name, ...numbers) {
+                let total = 0;
+                for (const num of numbers) {
+                    total += num;
+                }
+                document.writeln(`<p>Total for ${name}: ${total}</p>`);
+            }
+
+            // mengisi variabel total1 dan total2 dengan hasil dari pemanggilan fungsi sum
+            const total1 = sum("Orange", 1, 2, 3);
+            const total2 = sum("Apple", 4, 5, 6, 7, 8);
+
+            total1;
+            total2;
+
+            sum("Banana", 10, 20); // Memanggil fungsi sum dengan dua angka
+            const value = [5,5];
+            sum("Grapes", ...value); // Memanggil fungsi sum dengan array yang di-spread menjadi argumen individual
+
+            document.writeln("<h2>Old Function with Arguments Object</h2>");
+            /**
+             * Fungsi lama untuk menjumlahkan angka-angka menggunakan arguments object
+             * @returns {number} - Hasil penjumlahan dari angka-angka yang diberikan
+             * Fungsi ini menggunakan arguments object, yang merupakan array-like object yang berisi semua argumen yang diterima oleh fungsi.
+             * Namun, arguments object tidak memiliki metode array seperti map, filter, atau reduce, sehingga lebih sulit untuk digunakan dibandingkan dengan rest parameters.
+             */
+            function oldSum() {
+                // Fungsi lama untuk menjumlahkan angka-angka
+                let total = 0;
+                for (let i = 0; i < arguments.length; i++) {
+                    total += arguments[i];
+                }
+                return total;
+            }
+
+            const oldTotal = oldSum(5,5);
+            document.writeln(`<p>Old Total: ${oldTotal}</p>`);
+        </script>
+    </body>
+</html>
