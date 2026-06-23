@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konversi String dan Number</title>
+    </head>
+    <body>
+        <script>
+            document.writeln("<h1>Konversi String dan Number</h1>");
+            // Konversi String ke Number
+            const stringNumber = "123";
+            const convertedNumber = Number(stringNumber);
+            document.writeln(`String: ${stringNumber}, Number: ${convertedNumber}`);
+            document.writeln("<br>");
+
+            // Konversi Number ke String
+            const numberValue = 456;
+            const convertedString = String(numberValue);
+            document.writeln(`Number: ${numberValue}, String: ${convertedString}`);
+            document.writeln("<br>");
+            document.writeln("<h2>Contoh tanpa konversi</h2>");
+            const value1 = "1";
+            const value2 = 1;
+            const sum = value1 + value2; // Hasilnya adalah "11" karena value1 adalah string
+            document.writeln(`Hasil penjumlahan tanpa konversi: ${sum}`);
+            document.writeln("<br>");
+            document.writeln("<h2>Contoh dengan konversi</h2>");
+            const sumWithConversion = Number(value1) + value2; // Hasilnya adalah 2
+            document.writeln(`Hasil penjumlahan dengan konversi: ${sumWithConversion}`);
+            // Konversi menghasilkan NaN (Not a Number) jika string tidak dapat dikonversi menjadi angka
+            const invalidString = "abc";
+            const invalidConversion = Number(invalidString); // Hasilnya adalah NaN
+            document.writeln("<br>");
+            document.writeln(`Konversi string "${invalidString}" menjadi number: ${invalidConversion}`);
+            document.writeln("<br>");
+            // pengecekan apakah hasil konversi adalah NaN
+            if (isNaN(invalidConversion)) {
+                document.writeln(`Hasil konversi "${invalidString}" adalah NaN (Not a Number)`);
+            }
+        </script>
+</html>
