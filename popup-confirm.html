@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Popup Confirm</title>
+    </head>
+    <body>
+        <script>
+            const result = confirm("Apakah Anda yakin?");
+            if (result) {
+                const name = prompt("Masukkan nama Anda:");
+                if (name) {
+                    alert("Halo, " + name + "!");
+                } else {
+                    alert("Anda tidak memasukkan nama.");
+                }
+            } else {
+                alert("Anda mengklik tombol 'Cancel'.");
+            }
+        </script>
+    </body>
+</html>
