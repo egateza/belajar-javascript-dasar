@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>For-In Loop</title>
+    </head>
+    <body>
+        <script>
+            // Contoh penggunaan for-in loop
+            document.writeln("<h2>For-In Loop</h2>");
+            /**
+             * Perbedaan utama antara for-in dan for-of loop adalah:
+             * - for-in loop digunakan untuk mengiterasi properti dari objek atau indeks dari array.
+             * - for-of loop digunakan untuk mengiterasi elemen dari array atau objek iterable lainnya.
+             * apa saja yang bisa diiterasi dengan for-in loop, seperti objek dan array.
+             */
+
+            const person = {
+                firstName: "Ega",
+                lastName: "Teja",
+                age: 30
+            };
+            document.writeln("<h3>Properti dari objek person:</h3>");
+            // Menggunakan for-in loop untuk mengiterasi properti dari objek person
+            for (const key in person) {
+                document.writeln(`<p>${key}: ${person[key]}</p>`);
+            }
+
+            const names = ["Ega", "Teja", "Pratama"];
+            document.writeln("<h3>Indeks dari array names:</h3>");
+            // Menggunakan for-in loop untuk mengiterasi indeks dari array names
+            for (const index in names) {
+                document.writeln(`<p>Index ${index}: ${names[index]}</p>`);
+            }
+        </script>
+    </body>
+</html>
