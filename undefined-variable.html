@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>JavaScript Undefined Variable</title>
+    </head>
+    <body>
+        <script>
+            // Contoh penggunaan variabel yang tidak didefinisikan
+            let undefinedVariable; // Variabel ini belum didefinisikan
+            if (undefinedVariable === undefined) {
+                console.info("Variabel belum didefinisikan.");
+            } else {
+                console.info("Variabel sudah didefinisikan.");
+            }
+
+            const names = ["Alice", "Bob", "Charlie"];
+            if (names[3] === undefined) {
+                console.info("Indeks ke-3 tidak ada dalam array.");
+            } else {
+                console.info("Indeks ke-3 ada dalam array.");
+            }
+
+            const person = {
+                name: "Ega",
+                age: 30,
+            };
+            if (person.age === undefined) {
+                console.info("Properti 'age' belum didefinisikan dalam objek person.");
+            } else {
+                console.info("Properti 'age' sudah didefinisikan dalam objek person.");
+            }
+        </script>
+    </body>
+</html>
