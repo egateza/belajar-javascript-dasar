@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Array</title>
+    </head>
+    <body>
+        <script>
+            // Membuat array
+            const fruits = ["apel", "pisang", "jeruk"];
+            document.writeln("<h1>Javascript Array</h1>");
+            document.writeln("<p>Array: " + fruits + "</p>");
+
+            // Mengakses elemen array
+            document.writeln("<p>Elemen pertama: " + fruits[0] + "</p>");
+            document.writeln("<p>Elemen kedua: " + fruits[1] + "</p>");
+            document.writeln("<p>Elemen ketiga: " + fruits[2] + "</p>");
+
+            // Mengubah elemen array
+            fruits[0] = "mangga";
+            document.writeln("<p>Setelah diubah: " + fruits + "</p>");
+
+            // Menambahkan elemen ke array
+            fruits.push("anggur");
+            document.writeln("<p>Setelah menambahkan elemen: " + fruits + "</p>");
+
+            // Menghapus elemen dari array
+            fruits.pop();
+            document.writeln("<p>Setelah menghapus elemen: " + fruits + "</p>");
+
+            // Mendapatkan panjang array
+            document.writeln("<p>Panjang array: " + fruits.length + "</p>");
+
+            const names = [];
+            names.push("Ega");
+            names.push("Teja");
+            names.push("Pratama");
+            document.writeln("<p>Array names: " + names + "</p>");
+            document.writeln("<p>Panjang array names: " + names.length + "</p>");
+            console.table(names);
+            delete names[0];
+            document.writeln("<p>Setelah menghapus elemen pertama: " + names + "</p>");
+            document.writeln("<p>Panjang array names setelah delete: " + names.length + "</p>");
+            console.table(names);
+        </script>
+    </body>
+</html>
