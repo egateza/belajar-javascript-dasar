@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String Template</title>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>JavaScript String Template Example</h1>");
+        // Mendeklarasikan variabel
+        const nama = "John";
+        const usia = 25;
+        const template = `Nama: ${nama}, Usia: ${usia}`;
+
+        // Menggunakan string template
+        console.log(template);
+        document.writeln(`${template}`);
+
+        document.writeln("<br>");
+        document.writeln("<h2>Contoh Penggunaan Expression & Ternary Operator</h2>");
+        const nilai = 50;
+        document.writeln(`Nilai: ${nilai}`);
+        document.writeln("<br>");
+        document.writeln(`Nilai: ${nilai >= 60 ? "Lulus" : "Tidak Lulus"}`);
+
+        document.writeln("<br>");
+        document.writeln("<h2>Contoh Penggunaan Multiline String</h2>");
+        const multiline = `Ini adalah string
+        yang memiliki beberapa
+        baris`;
+        document.writeln(`${multiline}`);
+    </script>
+</body>
+</html>
