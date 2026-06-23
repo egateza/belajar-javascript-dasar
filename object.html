@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Javascript Object</title>
+    </head>
+    <body>
+        <script>
+            // Membuat objek
+            const person = {
+                name: "Ega",
+                "last name": "Teja Pratama",
+                age: 25,
+                city: "Jakarta"
+            };
+            document.writeln("<h1>Javascript Object</h1>");
+            document.writeln("<p>Object: " + JSON.stringify(person) + "</p>");
+
+            // Mengakses properti objek
+            document.writeln("<p>Name: " + person.name + "</p>");
+            document.writeln("<p>Last Name: " + person["last name"] + "</p>");
+            document.writeln("<p>Age: " + person.age + "</p>");
+            document.writeln("<p>City: " + person.city + "</p>");
+
+            // Mengubah properti objek
+            person.age = 31;
+            document.writeln("<p>Setelah diubah: " + JSON.stringify(person) + "</p>");
+
+            // Menambahkan properti ke objek
+            person.country = "Indonesia";
+            document.writeln("<p>Setelah menambahkan properti: " + JSON.stringify(person) + "</p>");
+
+            // Menghapus properti dari objek
+            delete person.city;
+            document.writeln("<p>Setelah menghapus properti: " + JSON.stringify(person) + "</p>");
+        </script>
+    </body>
+</html>
