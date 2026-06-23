@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Operator Logika Non-Boolean</title>
+    </head>
+    <body>
+        <script>
+            // Contoh penggunaan operator logika dengan nilai non-boolean
+
+            let a = 5;
+            let b = 10;
+            let c = 0;
+
+            document.writeln("<h2>Contoh Operator Logika Non-Boolean</h2>");
+            document.writeln(`<p>a: ${a}</p>`);
+            document.writeln(`<p>b: ${b}</p>`);
+            document.writeln(`<p>c: ${c}</p>`);
+
+            // Operator AND (&&)
+            /**
+             * Operator AND (&&) akan mengembalikan nilai pertama yang falsy atau nilai terakhir jika semua operand bernilai truthy.
+             * Contoh:
+             * true && true => true
+             * true && false => false
+             * false && true => false
+             * false && false => false
+             */
+            document.writeln("<h2>Operator AND (&&)</h2>");
+            document.writeln(`<p>a && b: ${a && b}</p>`); // 10
+            document.writeln(`<p>a && c: ${a && c}</p>`); // 0
+
+            // Operator OR (||)
+            /**
+             * Operator OR (||) akan mengembalikan nilai pertama yang truthy atau nilai terakhir jika semua operand bernilai falsy.
+             * Contoh:
+             * true || true => true
+             * true || false => true
+             * false || true => true
+             * false || false => false
+             */
+            document.writeln("<h2>Operator OR (||)</h2>");
+            document.writeln(`<p>a || b: ${a || b}</p>`); // 5
+            document.writeln(`<p>c || b: ${c || b}</p>`); // 10
+
+            document.writeln("<h2>Contoh penggunaan operator logika dengan objek</h2>");
+            const person = {
+                firstName: "Ega",
+                lastName: "Teja",
+                age: 25,
+                address: {
+                    street: "Jalan Merdeka",
+                    city: "Jakarta"
+                }
+            };
+            document.writeln(`<p>First Name: ${person.firstName}</p>`);
+            document.writeln(`<p>Last Name: ${person.lastName}</p>`);
+
+            const name = person.firstName || person.lastName;
+            document.writeln(`<p>Nama: ${name}</p>`); // Ega
+
+        </script>
+    </body>
+</html>
