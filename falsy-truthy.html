@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JavaScript Falsy dan Truthy</title>
+    </head>
+    <body>
+        <script>
+            
+            // Contoh nilai falsy
+            let data = 0;
+
+
+            document.writeln("<h2>Nilai Falsy</h2>");
+            /** 
+             * contoh nilai falsy
+             * false
+             * 0
+             * -0
+             * 0n
+             * ""
+             * null
+             * undefined
+             * NaN
+             */
+            if (data) {
+                document.writeln("<p>Data memiliki nilai truthy</p>");
+            } else {
+                document.writeln("<p>Data memiliki nilai falsy</p>");
+            }
+
+            document.writeln("<h2>Nilai Truthy</h2>");
+
+            /** 
+             * contoh nilai truthy
+             * true
+             * {}
+             * []
+             * 1
+             * "0"
+             * "false"
+             * new Date()
+             * -1
+             * 3.14
+             * Infinity
+             * -Infinity
+             */
+            data = 1;
+            if (data) {
+                document.writeln("<p>Data memiliki nilai truthy</p>");
+            } else {
+                document.writeln("<p>Data memiliki nilai falsy</p>");
+            }
+            
+        </script>
+    </body>
+</html>
