@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Object Method</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Object method adalah fungsi yang didefinisikan sebagai properti dari sebuah objek.
+             */
+
+            // Contoh penggunaan object method
+            document.writeln("<h2>Object Method</h2>");
+
+            const person = {
+                name: "Ega",
+                age: 30,
+                greet: function() {
+                    return `Hello, my name is ${this.name}`;
+                }
+            };
+
+            document.writeln(`<p>${person.greet()}</p>`);
+            person.introduce = function() {
+                return `I am ${this.age} years old.`;
+            };
+            document.writeln(`<p>${person.introduce()}</p>`);
+
+        </script>
+    </body>
+</html>
