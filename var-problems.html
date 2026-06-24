@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Javascript Var Problems</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Contoh masalah dengan var
+             * var memiliki lingkup fungsi, sehingga jika digunakan dalam loop, 
+             * nilai variabel akan tetap sama di setiap iterasi.
+             * 
+             */
+            document.writeln("<h2>Var Problems</h2>");
+            let i = 20;
+            for (let i = 0; i < 5; i++) {
+                document.writeln(`<p>Local value of i: ${i}</p>`);
+                
+            }
+
+            document.writeln(`<p>Global value of i: ${i}</p>`);
+
+        </script>
+    </body>
+</html>
