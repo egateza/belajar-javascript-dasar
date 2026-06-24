@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Anonymous Function</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Anonymous function adalah function yang tidak memiliki nama.
+             * Anonymous function biasanya digunakan sebagai parameter atau value.
+             * Anonymous function dapat didefinisikan menggunakan function expression atau arrow function.
+             */
+            // Contoh penggunaan anonymous function
+            document.writeln("<h2>Anonymous Function</h2>");
+
+            const greet = function(name) {
+                return `Hello, ${name}!`;
+            };
+
+            const message = greet("World");
+            document.writeln(`<p>${message}</p>`);
+
+            // Anonymous function sebagai parameter
+            document.writeln("<h3>Anonymous Function as Parameter</h3>");
+            function processUserInput(callback) {
+                const name = "Ega";
+                document.writeln(`<p>${callback(name)}</p>`);
+            }
+
+            processUserInput(function(name) {
+                return `Hi, ${name}!`;
+            });
+        </script>
+    </body>
+</html>
