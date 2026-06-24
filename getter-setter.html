@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Getter dan Setter</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Getter dan Setter adalah metode khusus dalam objek JavaScript yang memungkinkan kita untuk mengakses dan memodifikasi properti objek dengan cara yang lebih terkontrol.
+             * Getter digunakan untuk mengambil nilai properti, sedangkan Setter digunakan untuk menetapkan nilai properti.
+             */
+
+            // Contoh penggunaan getter dan setter
+            document.writeln("<h2>Getter dan Setter</h2>");
+
+            const person = {
+                firstName: "Ega",
+                lastName: "Pratama",
+                get fullName() {
+                    return `${this.firstName} ${this.lastName}`;
+                },
+                set fullName(name) {
+                    const parts = name.split(" ");
+                    this.firstName = parts[0];
+                    this.lastName = parts[1];
+                }
+            };
+
+            document.writeln(`<p>Full Name: ${person.fullName}</p>`);
+
+            person.fullName = "John Doe";
+            document.writeln(`<p>Updated Full Name: ${person.fullName}</p>`);
+
+            document.writeln(`<p>First Name: ${person.firstName}</p>`);
+            document.writeln(`<p>Last Name: ${person.lastName}</p>`);
+
+        </script>
+    </body>
+</html>
