@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Generator Function</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Generator function adalah function yang dapat dijeda (pause)
+             * dan dilanjutkan kembali (resume) eksekusinya.
+             *
+             * Generator function didefinisikan dengan tanda bintang (*)
+             * setelah keyword function.
+             *
+             * Generator function menggunakan keyword yield untuk
+             * menghasilkan nilai dan menghentikan sementara eksekusi.
+             *
+             * Saat dipanggil, generator function tidak langsung menjalankan
+             * seluruh isi function, melainkan mengembalikan sebuah
+             * Generator Object (iterator).
+             *
+             * Eksekusi dilanjutkan dengan memanggil method next().
+             * Method next() mengembalikan objek:
+             * { value: ..., done: ... }
+             *
+             * - value : nilai yang dihasilkan oleh yield.
+             * - done  : bernilai false jika masih ada yield berikutnya,
+             *           dan true jika function telah selesai.
+             *
+             * Generator sering digunakan untuk lazy evaluation, yaitu
+             * teknik di mana nilai dihitung atau dihasilkan hanya ketika
+             * diperlukan, bukan sekaligus di awal.
+            */
+
+            // Contoh penggunaan generator function
+            document.writeln("<h2>Generator Function</h2>");
+
+            function* numberGenerator() {
+                yield 1;
+                yield 2;
+                yield 3;
+            }
+
+            const generator = numberGenerator();
+            document.writeln(`<p>${generator.next().value}</p>`);
+            document.writeln(`<p>${generator.next().value}</p>`);
+            document.writeln(`<p>${generator.next().value}</p>`);
+
+
+            // Contoh lain penggunaan generator function
+
+            function* createNames() {
+                yield "Ega";
+                yield "Dwi";
+                yield "Saputra";
+            }
+
+            const namesGenerator = createNames();1
+            for (const name of namesGenerator) {
+                document.writeln(`<p>${name}</p>`);
+            }
+
+            // Contoh lain penggunaan generator function dengan parameter
+            
+            function* buatGanjil(value) {
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 !== 0) {
+                        yield i;
+                    }
+
+                }
+            }
+
+            const numbers = buatGanjil(10);
+            document.writeln(`<p>Panggil numbers.next() untuk mendapatkan nilai ganjil berikutnya: ${numbers.next().value}</p>`);
+            for (const number of numbers) {
+                document.writeln(`<p>${number}</p>`);
+            }
+
+            /**
+             * Dan berikut contoh menggunakan eager evaluation, yaitu menghitung semua nilai sekaligus
+             * dan menyimpannya dalam array. Ini berbeda dengan lazy evaluation yang hanya menghitung nilai
+             * ketika diperlukan.
+             */
+            document.writeln("<h3>Eager Evaluation</h3>");
+            function buatGanjilArray(value) {
+                const result = [];
+                for (let i = 1; i <= value; i++) {
+                    if (i % 2 !== 0) {
+                        console.info(`Yielding: ${i}`);
+                        result.push(i);
+                    }
+                }
+                return result;
+            }
+            const numbersArray = buatGanjilArray(10);
+            for (const number of numbersArray) {
+                document.writeln(`<p>${number}</p>`);
+            }
+
+
+        </script>
+    </body>
+</html>
