@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Closure</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Closure adalah fungsi yang memiliki akses ke variabel-variabel di lingkup luar (parent scope)
+             * meskipun fungsi tersebut telah selesai dijalankan.
+             */
+
+            // Contoh penggunaan closure
+            document.writeln("<h2>Closure</h2>");
+
+            function createAdder(value) {
+                const owner = "Ega";
+                function add(num) {
+                    console.info(`Owner: ${owner}`);
+                    return value + num;
+                }
+                return add;
+            }
+            const adder = createAdder(5);
+            document.writeln(`<p>Result: ${adder(3)}</p>`);
+
+        </script>
+    </body>
+</html>
