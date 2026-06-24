@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript debugger</title>
+</head>
+<body>
+    <script>
+        // Contoh penggunaan debugger untuk menghentikan eksekusi saat DevTools aktif.
+        // Saat baris ini tercapai, browser akan berhenti sementara agar variabel bisa diperiksa.
+        function createFullName(firstName, middleName, lastName) {
+            debugger;
+            // Nilai setiap parameter digabung menjadi satu string nama lengkap.
+            const fullName = `${firstName} ${middleName} ${lastName}`;
+            return fullName;
+
+        }
+
+        // Memanggil fungsi agar breakpoint debugger dieksekusi dan hasilnya bisa dilihat di console.
+        const name = createFullName('Ega', 'Teja', 'Pratama');
+        console.info(name);
+    </script>
+</body>
+</html>
