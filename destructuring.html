@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Destructuring</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Destructuring adalah fitur dalam JavaScript yang memungkinkan kita untuk "menghancurkan" nilai dari array atau objek dan menetapkan mereka ke variabel yang berbeda.
+             * Dengan destructuring, kita dapat mengekstrak nilai dari array atau properti dari objek dengan cara yang lebih ringkas dan mudah dibaca.
+             * Aturan dasar destructuring adalah menggunakan tanda kurung siku [] untuk array dan tanda kurung kurawal {} untuk objek.
+             * Urutan variabel yang dideklarasikan dalam destructuring harus sesuai dengan urutan elemen dalam array atau nama properti dalam objek.
+             * Destructuring juga dapat digunakan dalam parameter fungsi untuk mengekstrak nilai dari objek yang diteruskan sebagai argumen.
+             * Kita juga dapat menggunakan destructuring untuk menetapkan nilai default jika nilai yang diekstrak tidak ada atau undefined.
+             * Destructuring dapat digunakan untuk mengekstrak nilai dari array atau objek yang bersarang (nested) dengan menggunakan destructuring bersarang.
+             */
+
+            // Contoh destructuring array
+            document.writeln("<h2>Destructuring Array</h2>");
+
+            const names = ["Ega", "Teja", "Pratama"];
+            //menggunakan index untuk mengambil nilai dari array
+            document.writeln(`<h3>Tanpa Destructuring</h3>`);
+            document.writeln(`<p>First: ${names[0]}</p>`);
+            document.writeln(`<p>Second: ${names[1]}</p>`);
+            document.writeln(`<p>Third: ${names[2]}</p>`);
+
+            // Menggunakan destructuring untuk mengambil nilai dari array
+            document.writeln(`<h3>Dengan Destructuring</h3>`);
+            const [first, second, third] = names;
+
+            document.writeln(`<p>First: ${first}</p>`);
+            document.writeln(`<p>Second: ${second}</p>`);
+            document.writeln(`<p>Third: ${third}</p>`);
+
+            // Contoh destructuring object
+            document.writeln("<h2>Destructuring Object</h2>");
+            const person = {
+                name: "Ega",
+                age: 30,
+                address: {
+                    city: "Jakarta",
+                    country: "Indonesia"
+                },
+                hobbies: ["Gaming", "Sleeping", "Coding"]
+            };
+
+            const { name, age, address: { city, country }, ...others } = person;
+            document.writeln(`<p>Name: ${name}</p>`);
+            document.writeln(`<p>Age: ${age}</p>`);
+            document.writeln(`<p>City: ${city}</p>`);
+            document.writeln(`<p>Country: ${country}</p>`);
+            document.writeln(`<p>Hobbies: ${others.hobbies.join(", ")}</p>`);
+
+            // Contoh destructuring function parameters
+            document.writeln("<h2>Destructuring Function Parameters</h2>");
+            function displayPerson({ name, age, address: { city, country } }) {
+                document.writeln(`<p>Name: ${name}</p>`);
+                document.writeln(`<p>Age: ${age}</p>`);
+                document.writeln(`<p>City: ${city}</p>`);
+                document.writeln(`<p>Country: ${country}</p>`);
+            }
+
+            displayPerson(person);
+
+            {
+                // Contoh destructuring dengan default values
+                document.writeln("<h2>Destructuring dengan Default Values</h2>");
+                const names = ["Ega", "Teja"];
+                const [first, second, third = "Pratama"] = names;
+                document.writeln(`<p>First: ${first}</p>`);
+                document.writeln(`<p>Second: ${second}</p>`); 
+                document.writeln(`<p>Third: ${third}</p>`);
+
+                // Contoh destructuring menggunakan default values pada objek
+                document.writeln("<h2>Destructuring Object dengan Default Values</h2>");
+                const person = {
+                    name: "Ega",
+                    age: 30
+                };
+                const { name, age, address = { city: "Unknown", country: "Unknown" } } = person;
+                document.writeln(`<p>Name: ${name}</p>`);
+                document.writeln(`<p>Age: ${age}</p>`);
+                document.writeln(`<p>City: ${city}</p>`);
+                document.writeln(`<p>Country: ${country}</p>`);
+            }
+        </script>
+    </body>
+</html>
