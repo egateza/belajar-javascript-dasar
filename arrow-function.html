@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Arrow function adalah cara yang lebih singkat untuk menulis function
+             * dibandingkan dengan function expression tradisional.
+             *
+             * Arrow function tidak memiliki this, arguments, super, atau new.target.
+             * Mereka lebih cocok untuk fungsi yang sederhana dan tidak memerlukan
+             * konteks this yang spesifik.
+             */
+
+            // Contoh penggunaan arrow function
+            document.writeln("<h2>Arrow Function</h2>");
+
+            // Function expression tradisional
+            const traditionalFunction = function(x) {
+                return x * 2;
+            };
+
+            // Arrow function
+
+            // const arrowFunction = (x) => x * 2;
+            const arrowFunction = x => x * 2;
+
+            document.writeln(`<p>Traditional Function: ${traditionalFunction(5)}</p>`);
+            document.writeln(`<p>Arrow Function: ${arrowFunction(5)}</p>`);
+
+            // Arrow function dengan banyak parameter
+            const add = (a, b) => a + b;
+            document.writeln(`<p>Addition: ${add(3, 4)}</p>`);
+
+            // Arrow function tanpa parameter
+            const greet = () => "Hello, World!";
+            document.writeln(`<p>Greeting: ${greet()}</p>`);
+
+            // Arrow function dengan blok kode
+            const multiply = (a, b) => {
+                console.log(`Multiplying ${a} and ${b}`);
+                return a * b;
+            };
+            document.writeln(`<p>Multiplication: ${multiply(3, 4)}</p>`);
+
+            // Arrow function sebagai callback
+            function giveMeName(callback) {
+                callback("Ega");
+            }
+            giveMeName(name => document.writeln(`<p>Hello, ${name}!</p>`));
+
+        </script>
+    </body>
+</html>
