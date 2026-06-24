@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Kata Kunci This</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Kata kunci 'this' merujuk pada objek yang sedang menjalankan fungsi saat ini.
+             * Dalam konteks objek, 'this' mengacu pada objek itu sendiri. Namun, dalam konteks fungsi global atau fungsi yang dipanggil secara langsung, 'this' mengacu pada objek global (window di browser).
+             */
+
+            // Contoh penggunaan kata kunci 'this'
+            document.writeln("<h2>Kata Kunci This</h2>");
+
+            const person = {
+                name: "Ega",
+                age: 30,
+                greet: function() {
+                    return `Hello, my name is ${this.name}`;
+                }
+            };
+
+            document.writeln(`<p>${person.greet()}</p>`);
+
+        </script>
+    </body>
+</html>
