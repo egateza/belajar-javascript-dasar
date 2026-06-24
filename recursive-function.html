@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Recursive Function</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Recursive function adalah function yang memanggil dirinya sendiri.
+             * Recursive function memiliki dua bagian utama: base case dan recursive case.
+             * Base case adalah kondisi di mana function berhenti memanggil dirinya sendiri.
+             * Recursive case adalah kondisi di mana function memanggil dirinya sendiri.
+             */
+
+            // Contoh penggunaan recursive function
+            document.writeln("<h2>Recursive Function</h2>");
+
+            // Function untuk menghitung faktorial menggunakan iterative approach
+            function factorial(n) {
+                let result = 1;
+                for (let i = 1; i <= n; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+
+            // Function untuk menghitung faktorial menggunakan recursive approach
+            function factorialRecursive(n) {
+                // Base case
+                if (n === 0) {
+                    return 1;
+                }
+                // Recursive case
+                return n * factorialRecursive(n - 1);
+            }
+
+            const result = factorial(5);
+            const resultRecursive = factorialRecursive(5);
+            document.writeln(`<p>5! = ${result}</p>`);
+            document.writeln(`<p>5! (recursive) = ${resultRecursive}</p>`);
+        </script>
+    </body>
+</html>
