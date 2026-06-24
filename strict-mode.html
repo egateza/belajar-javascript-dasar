@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>JavaScript Strict Mode</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Strict mode adalah fitur dalam JavaScript yang memperkenalkan aturan yang lebih ketat untuk menulis kode.
+             * Dengan strict mode, beberapa kesalahan yang sebelumnya diabaikan akan menghasilkan error, sehingga membantu kita menulis kode yang lebih aman dan bebas dari bug.
+             * Strict mode dapat diaktifkan dengan menambahkan "use strict"; di awal file JavaScript atau di dalam fungsi.
+            */ 
+            "use strict"; // Mengaktifkan strict mode
+
+            // Contoh penggunaan strict mode
+            document.writeln("<h2>Strict Mode</h2>");
+
+            function myFunction() {
+                // Dalam strict mode, variabel harus dideklarasikan sebelum digunakan
+                let x = 3.14; // Variabel x dideklarasikan dengan let
+                document.writeln(`<p>Nilai x: ${x}</p>`);
+            }
+
+            myFunction();
+
+            // Contoh kesalahan dalam strict mode
+            
+            try {
+                document.writeln("<h3>Contoh Kesalahan dalam Strict Mode</h3>");
+                y = 3.14; // Variabel y tidak dideklarasikan, akan menghasilkan error
+            } catch (error) {
+                document.writeln(`<p>Error: ${error.message}</p>`);
+            }
+        </script>
+</html>
