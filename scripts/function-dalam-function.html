@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Function dalam Function</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Function dalam function adalah function yang didefinisikan di dalam function lain.
+             * Function dalam function dapat mengakses variable dari function luar.
+             * Function dalam function biasanya digunakan untuk membuat closure atau untuk mengorganisir kode.
+             * Inner function hanya dapat diakses dari function luar, 
+             * sehingga tidak dapat diakses dari luar function luar.
+             */
+
+            // Contoh penggunaan function dalam function
+            document.writeln("<h2>Function dalam Function</h2>");
+
+            function outerFunction() {
+                document.writeln("<p>Ini adalah function luar</p>");
+
+                function innerFunction() {
+                    document.writeln("<p>Ini adalah function dalam</p>");
+                }
+
+                innerFunction();
+            }
+
+            outerFunction();
+        </script>
+    </body>
+</html>
