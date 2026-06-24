@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Scope</title>
+    </head>
+    <body>
+        <script>
+            /**
+             * Scope adalah ruang lingkup di mana variabel dan fungsi dapat diakses.
+             * Terdapat dua jenis scope dalam JavaScript: global scope dan local scope.
+             * Global scope adalah ruang lingkup di mana variabel dan fungsi dapat diakses dari mana saja dalam kode.
+             * Local scope adalah ruang lingkup di mana variabel dan fungsi hanya dapat diakses dari dalam function tertentu.
+             */
+
+            // Contoh penggunaan scope
+            document.writeln("<h2>Scope</h2>");
+
+            // Variabel dengan global scope
+            const globalVar = "Saya adalah variabel global";
+
+            function outerFunction() {
+                // Variabel dengan local scope
+                const localVar = "Saya adalah variabel lokal";
+
+                document.writeln(`<p>${globalVar}</p>`);
+                document.writeln(`<p>${localVar}</p>`);
+
+                function innerFunction() {
+                    // Variabel dengan local scope
+                    const innerVar = "Saya adalah variabel lokal dari function dalam";
+
+                    document.writeln(`<p>${globalVar}</p>`);
+                    document.writeln(`<p>${localVar}</p>`);
+                    document.writeln(`<p>${innerVar}</p>`);
+                }
+
+                innerFunction();
+            }
+
+            outerFunction();
+        </script>
+    </body>
+</html>
