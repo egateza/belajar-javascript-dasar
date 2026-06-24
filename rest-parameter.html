@@ -50,6 +50,36 @@
 
             const oldTotal = oldSum(5,5);
             document.writeln(`<p>Old Total: ${oldTotal}</p>`);
+
+            /**
+             * ini bukan contoh penggunaan rest parameters yang benar karena argumen kedua bukanlah rest parameter, melainkan sebuah array. 
+             * Rest parameters harus dideklarasikan dengan tiga titik (...) di depan nama parameter, dan harus berada di posisi terakhir dalam daftar parameter.
+             */
+            function wrongRestParameters(name, numbers) {
+                document.writeln("<h2>Wrong Rest Parameters</h2>");
+                // Fungsi ini salah karena tidak menggunakan rest parameters
+                let total = 0;
+                for (const num of numbers) {
+                    total += num;
+                }
+                document.writeln(`<p>Total for ${name}: ${total}</p>`);
+            }
+
+            wrongRestParameters("Mango", [1, 2, 3]); // Memanggil fungsi wrongRestParameters dengan array sebagai argumen kedua
+
+            /**
+             * Contoh yang tidak valid.
+             *
+             * Rest parameter (...numbers) harus berada di posisi terakhir
+             * dalam daftar parameter fungsi. Pada contoh ini masih terdapat
+             * parameter lain (category) setelah rest parameter, sehingga akan
+             * menyebabkan SyntaxError:
+             *
+             * "Rest parameter must be last formal parameter"
+             * function wrongRestParametersPosition(name, ...numbers, category) {
+             *     // ...
+             * }
+            */
         </script>
     </body>
 </html>
