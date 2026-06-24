@@ -13,6 +13,19 @@
 
             const message = greet("World");
             document.writeln(`<p>${message}</p>`);
+
+            document.writeln("<h3>Function sebagai value</h3>");
+
+            let say = greet;
+            document.writeln(`<p>${say("JavaScript")}</p>`);
+
+            document.writeln("<h3>Function sebagai parameter</h3>");
+            function processUserInput(callback) {
+                const name = "Ega";
+                document.writeln(`<p>${callback(name)}</p>`);
+            }
+
+            processUserInput(say);
         </script>
     </body>
 </html>
